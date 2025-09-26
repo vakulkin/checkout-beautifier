@@ -1,0 +1,357 @@
+/**
+ * Checkout Beautifier Styles - Professional Black Theme
+ *
+ * @version 1.0.0
+ */
+
+/* ==========================================================================
+   CSS Variables for Consistent Theming
+   ========================================================================== */
+
+:root {
+    --cb-primary-color: #000000;
+    --cb-primary-hover: #333333;
+    --cb-primary-active: #000000;
+    --cb-text-light: #ffffff;
+    --cb-text-dark: #374151;
+    --cb-border-color: #d1d5db;
+    --cb-border-hover: #9ca3af;
+    --cb-background-default: #f9fafb;
+    --cb-background-hover: #f3f4f6;
+    --cb-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --cb-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --cb-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --cb-border-radius: 6px;
+    --cb-spacing-xs: 8px;
+    --cb-spacing-sm: 12px;
+    --cb-spacing-md: 16px;
+    --cb-spacing-lg: 20px;
+    --cb-spacing-xl: 24px;
+}
+
+/* ==========================================================================
+   WooCommerce Checkout Form Styling
+   ========================================================================== */
+
+.woocommerce-checkout .form-row {
+    margin-bottom: var(--cb-spacing-md);
+}
+
+/* Single unified form background */
+.woocommerce-checkout .customer-details {
+    background-color: var(--cb-background-default);
+    padding: var(--cb-spacing-xl);
+    margin-bottom: var(--cb-spacing-xl);
+    border-radius: 8px;
+    border: 1px solid var(--cb-border-color);
+}
+
+/* Section headings */
+.woocommerce-checkout .woocommerce-billing-fields h3,
+.woocommerce-checkout .woocommerce-shipping-fields h3,
+.woocommerce-checkout .woocommerce-additional-fields h3 {
+    margin-top: 0;
+    margin-bottom: var(--cb-spacing-md);
+    color: var(--cb-text-dark);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Base Input Styles
+   ========================================================================== */
+
+.woocommerce-checkout .woocommerce-input-wrapper {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+        width: 100%;
+        padding: var(--cb-spacing-sm) var(--cb-spacing-md);
+        border: 1px solid var(--cb-border-color);
+        border-radius: var(--cb-border-radius);
+        background-color: #ffffff;
+        color: var(--cb-text-dark);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.4;
+        transition: var(--cb-transition);
+        box-shadow: var(--cb-shadow-sm);
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &:focus {
+            border-color: var(--cb-primary-color);
+            box-shadow: var(--cb-shadow-md), 0 0 0 2px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        &:hover {
+            border-color: var(--cb-border-hover);
+            background-color: #ffffff;
+        }
+    }
+
+    /* Select specific styles */
+    select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right var(--cb-spacing-sm) center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        padding-right: 40px;
+        cursor: pointer;
+    }
+
+    /* Textarea specific styles */
+    textarea {
+        resize: vertical;
+        min-height: 80px;
+        padding: var(--cb-spacing-sm) var(--cb-spacing-md);
+    }
+}
+
+/* ==========================================================================
+   Select2 Styling (for state selects and Nova Poshta selects)
+   ========================================================================== */
+
+.woocommerce-checkout .select2-container--default .select2-selection--single {
+    height: auto;
+    padding: var(--cb-spacing-sm) var(--cb-spacing-md);
+    border: 1px solid var(--cb-border-color);
+    border-radius: var(--cb-border-radius);
+    background-color: #ffffff;
+    color: var(--cb-text-dark);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: var(--cb-transition);
+    box-shadow: var(--cb-shadow-sm);
+    outline: none;
+
+    &:hover {
+        border-color: var(--cb-border-hover);
+        background-color: #ffffff;
+        box-shadow: var(--cb-shadow-md);
+    }
+
+    .select2-selection__rendered {
+        color: var(--cb-text-dark);
+        padding: 0;
+        line-height: 1.4;
+    }
+
+    .select2-selection__placeholder {
+        color: #9ca3af;
+    }
+}
+
+.woocommerce-checkout .select2-container--default.select2-container--focus .select2-selection--single {
+    border-color: var(--cb-primary-color);
+    box-shadow: var(--cb-shadow-md), 0 0 0 2px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.woocommerce-checkout .select2-container--default .select2-selection__arrow {
+    height: 100%;
+    right: var(--cb-spacing-sm);
+    top: 0;
+
+    b {
+        border-color: #6b7280 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        height: 0;
+        left: 50%;
+        margin-left: -5px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 0;
+    }
+}
+
+/* ==========================================================================
+   Form Elements
+   ========================================================================== */
+
+.woocommerce-checkout .form-row label {
+    display: block;
+    margin-bottom: var(--cb-spacing-xs);
+    font-weight: 500;
+    color: var(--cb-text-dark);
+    font-size: 14px;
+}
+
+.woocommerce-checkout .form-row .required {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Validation States
+   ========================================================================== */
+
+.woocommerce-checkout .form-row {
+    &.woocommerce-invalid {
+        input,
+        select,
+        textarea {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+        }
+    }
+
+    &.woocommerce-validated {
+        input,
+        select,
+        textarea {
+            border-color: #28a745;
+            box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+        }
+    }
+
+    &.loading {
+        opacity: 0.7;
+        pointer-events: none;
+
+        input,
+        select,
+        textarea {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V6z'/%3e%3c/svg%3e");
+            background-position: right var(--cb-spacing-sm) center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+    }
+
+    .woocommerce-error {
+        color: #dc3545;
+        font-size: 13px;
+        margin-top: 4px;
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .woocommerce-checkout .customer-details {
+        padding: var(--cb-spacing-lg);
+        margin-bottom: var(--cb-spacing-lg);
+    }
+
+    .woocommerce-checkout .woocommerce-billing-fields h3,
+    .woocommerce-checkout .woocommerce-shipping-fields h3,
+    .woocommerce-checkout .woocommerce-additional-fields h3 {
+        font-size: 17px;
+        margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .woocommerce-checkout .customer-details {
+        padding: var(--cb-spacing-md);
+        margin-bottom: var(--cb-spacing-md);
+    }
+
+    .woocommerce-checkout .woocommerce-billing-fields h3,
+    .woocommerce-checkout .woocommerce-shipping-fields h3,
+    .woocommerce-checkout .woocommerce-additional-fields h3 {
+        font-size: 16px;
+        margin-bottom: var(--cb-spacing-sm);
+    }
+}
+
+/* ==========================================================================
+   Accessibility & Special Cases
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+    .woocommerce-checkout .woocommerce-input-wrapper {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        textarea,
+        select {
+            border-width: 2px;
+        }
+    }
+
+    .woocommerce-checkout .select2-container--default .select2-selection--single {
+        border-width: 2px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .woocommerce-checkout .woocommerce-input-wrapper {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        textarea,
+        select {
+            transition: none;
+        }
+    }
+
+    .woocommerce-checkout .select2-container--default .select2-selection--single {
+        transition: none;
+    }
+}
+
+@media print {
+    .woocommerce-checkout .woocommerce-input-wrapper {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        textarea,
+        select {
+            border: 1px solid #000;
+            background: #ffffff !important;
+            box-shadow: none;
+        }
+    }
+
+    .woocommerce-checkout .select2-container--default .select2-selection--single {
+        border: 1px solid #000;
+        background: #ffffff !important;
+        box-shadow: none;
+    }
+}
+
+/* ==========================================================================
+   Woodmart Theme Specific Overrides
+   ========================================================================== */
+
+.theme-woodmart .woocommerce-checkout .woocommerce-input-wrapper {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+        border-radius: var(--cb-border-radius) !important;
+        box-shadow: var(--cb-shadow-sm) !important;
+    }
+}
+
+.theme-woodmart .woocommerce-checkout .select2-container--default .select2-selection--single {
+    border-radius: var(--cb-border-radius) !important;
+    box-shadow: var(--cb-shadow-sm) !important;
+}
+
+/* ==========================================================================
+   Shipping Progress Bar Styling
+   ========================================================================== */
+
+.wd-shipping-progress-bar.wd-style-bordered {
+    background-color: #ffffff;
+}
