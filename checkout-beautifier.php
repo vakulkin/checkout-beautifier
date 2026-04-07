@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name: Checkout Beautifier
- * Plugin URI: https://example.com/checkout-beautifier
  * Description: Professional styling for WooCommerce checkout inputs and selects with black theme.
  * Version: 1.0.0
  * Text Domain: checkout-beautifier
