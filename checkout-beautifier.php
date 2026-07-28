@@ -23,3 +23,6 @@ function checkout_beautifier_enqueue_styles() {
     }
 }
 add_action('wp_enqueue_scripts', 'checkout_beautifier_enqueue_styles');
+
+// Remove Additional Fields (Order Notes) and its H3 title using WooCommerce hook
+add_filter('woocommerce_enable_order_notes_field', '__return_false', 9999);

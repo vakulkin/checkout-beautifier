@@ -55,6 +55,7 @@
     color: var(--cb-text-dark);
     font-size: 18px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -62,6 +63,7 @@
    ========================================================================== */
 
 .woocommerce-checkout .woocommerce-input-wrapper {
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -196,6 +198,7 @@
 
 .woocommerce-checkout .form-row {
     &.woocommerce-invalid {
+
         input,
         select,
         textarea {
@@ -205,6 +208,7 @@
     }
 
     &.woocommerce-validated {
+
         input,
         select,
         textarea {
@@ -274,6 +278,7 @@
 
 @media (prefers-contrast: high) {
     .woocommerce-checkout .woocommerce-input-wrapper {
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -291,6 +296,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .woocommerce-checkout .woocommerce-input-wrapper {
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -308,6 +314,7 @@
 
 @media print {
     .woocommerce-checkout .woocommerce-input-wrapper {
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -332,6 +339,7 @@
    ========================================================================== */
 
 .theme-woodmart .woocommerce-checkout .woocommerce-input-wrapper {
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
