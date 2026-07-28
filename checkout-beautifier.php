@@ -24,5 +24,11 @@ function checkout_beautifier_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'checkout_beautifier_enqueue_styles');
 
-// Remove Additional Fields (Order Notes) and its H3 title using WooCommerce hook
-add_filter('woocommerce_enable_order_notes_field', '__return_false', 9999);
+// Remove only the "Additional information" text (H3 title) using a translation hook
+add_filter('gettext', 'checkout_beautifier_remove_additional_info_title', 10, 3);
+function checkout_beautifier_remove_additional_info_title($translated_text, $text, $domain) {
+    if ($domain === 'woocommerce' && $text === 'Additional information' && is_checkout()) {
+        return '';
+    }
+    return $translated_text;
+}

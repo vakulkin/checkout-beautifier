@@ -58,6 +58,11 @@
     text-transform: uppercase;
 }
 
+.woocommerce-checkout .woocommerce-additional-fields h3:empty {
+    display: none;
+    margin: 0;
+}
+
 /* ==========================================================================
    Base Input Styles
    ========================================================================== */
